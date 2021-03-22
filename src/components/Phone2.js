@@ -9,7 +9,7 @@ class Phone1 extends Component {
     render(){
         return(
             <div className="phone-block">
-                <div className="android">{this.props.message}</div> 
+                <div className="android">{androidInitialText}</div> 
             </div>)
     }
 
