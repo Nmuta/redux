@@ -2,8 +2,12 @@ import { Component } from "react";
 
 class Item extends Component {
 
+    componentDidMount(){
+        console.log("my item is", this.props.item.name)
+    }
+
     render(){
-        return <div style={{color: "blue", width: "100px"}}>{this.props.item}</div>
+        return <span>{this.props.item.name}</span>
     }
 }
 

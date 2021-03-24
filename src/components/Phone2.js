@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import {connect} from "react-redux";
 
 import '../App.css';
-const iphoneInitialText = "iphone text";
+// const iphoneInitialText = "iphone text";
 
 
 class Phone2 extends Component {
