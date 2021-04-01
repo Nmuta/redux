@@ -12,4 +12,4 @@ class Items extends Component {
     }
 }
 
-export default Item
+export default Items

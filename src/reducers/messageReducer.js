@@ -4,7 +4,7 @@ const initialState = {
     message: "nein",
   }
   
-  export default (state = initialState, action) => {
+  const mystate =  (state = initialState, action) => {
     switch (action.type) {
       case UPDATE_MESSAGE: 
         return {...state, message: action.payload}
@@ -12,3 +12,5 @@ const initialState = {
         return state
     }
   }
+
+  export default mystate;
