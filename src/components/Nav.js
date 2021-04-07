@@ -23,7 +23,7 @@ class Nav extends Component{
     render(){
         return(
             <div className='nav'>
-                 <h5>All state in this app is managed by Redux.</h5>
+                  <h5>Learn ReAcT</h5>
                  <input onChange={this.updateLocalWord}/>
                  <button onClick={this.sendToRedux}>submit</button>
             </div>
