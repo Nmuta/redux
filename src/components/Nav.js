@@ -19,11 +19,20 @@ class Nav extends Component{
         this.props.updateMessage(this.state.localMessage)
     }
 
+    doStuff = (e) => {
+        e ? e.preventDefault(): null;
+        return "things are here";
+    }
+
     
     render(){
         return(
             <div className='nav'>
-                  <h5>Learn ReAcT</h5>
+                  <h5 className="learn">Learn ReAcT</h5>
+                  <button className="btn" onClick={this.doStuff}>do stuff </button>
+                  <span className="countable"> I am countable </span>
+                  <span className="countable"> I am countable </span>
+                  <span className="countable"> I am countable </span>
                  <input onChange={this.updateLocalWord}/>
                  <button onClick={this.sendToRedux}>submit</button>
             </div>
