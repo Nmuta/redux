@@ -12,11 +12,12 @@ describe("Messages reducer", () => {
 
     it("updates messages when needed", ()=> {
         const initialState= {message: "nein"};
-        const updatedMessage = {message: "lunch"};
+
+        const newMessage = "lunch";
         deepFreeze(initialState);
 
         expect(messageReducer(initialState, 
-                {type: UPDATE_MESSAGE, payload: "lunch"}))
+                {type: UPDATE_MESSAGE, payload: newMessage}))
                 .toEqual({message: "lunch"})
     })
 })

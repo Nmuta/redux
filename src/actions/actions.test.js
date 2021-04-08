@@ -1,6 +1,6 @@
 import configureMockStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
-import {getItems, FETCH_ITEMS_SUCCESS, FETCH_ITEMS_REQUEST} from './getItems';
+import {getItems, FETCH_ITEMS_SUCCESS, FETCH_ITEMS_REQUEST, FETCH_ITEMS_FAILED} from './getItems';
 import fetchMock from 'fetch-mock'
 
 const middlewares = [ thunk ];
@@ -36,6 +36,27 @@ describe('fetch items action', () => {
 
         
         return store.dispatch(getItems()).then(()=> {
+            expect(store.getActions()).toEqual(expectedActions);
+        })
+     })
+
+     it('should dispatch FETCH_ITEMS_FAILED', async () => {
+        
+        fetchMock.get("http://localhost:8082/api/products", {throws: Error});
+       
+        const expectedActions = [
+            {type: FETCH_ITEMS_REQUEST},
+            {type: FETCH_ITEMS_FAILED, 
+            "payload": Error},
+        ]
+        const store = mockStore({ messageReducer: {message: "nein"}, itemsReducer: [] })
+
+        
+        return store.dispatch(getItems()).then(()=> {
+            const storeGetActions = store.getActions();
+            console.log("store get actions was ", storeGetActions);
+            console.log("expected actions : ", expectedActions);
+
             expect(store.getActions()).toEqual(expectedActions);
         })
      })
