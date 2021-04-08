@@ -28,7 +28,7 @@ class Nav extends Component{
     render(){
         return(
             <div className='nav'>
-                  <h5 className="learn">Learn ReAcT</h5>
+                  <h5 className="learn">LeArn ReAcT</h5>
                   <button className="btn" onClick={this.doStuff}>do stuff </button>
                   <span className="countable"> I am countable </span>
                   <span className="countable"> I am countable </span>

@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders the same way every time 1`] = `
+<div
+  className="nav"
+>
+  <h5
+    className="learn"
+  >
+    LeArn ReAcT
+  </h5>
+  <button
+    className="btn"
+    onClick={[Function]}
+  >
+    do stuff 
+  </button>
+  <span
+    className="countable"
+  >
+     I am countable 
+  </span>
+  <span
+    className="countable"
+  >
+     I am countable 
+  </span>
+  <span
+    className="countable"
+  >
+     I am countable 
+  </span>
+  <input
+    onChange={[Function]}
+  />
+  <button
+    onClick={[Function]}
+  >
+    submit
+  </button>
+</div>
+`;
